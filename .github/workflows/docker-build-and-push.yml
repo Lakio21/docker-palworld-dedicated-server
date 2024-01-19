@@ -1,9 +1,6 @@
 name: docker-build-and-push-ci
 
-on:
-  push:
-    branches:
-      - "master"
+on: push
 
 jobs:
   docker-build-gameserver-image:
