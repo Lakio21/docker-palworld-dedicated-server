@@ -40,7 +40,7 @@ function startServer() {
 
     START_OPTIONS=""
     if [[ -n $COMMUNITY_SERVER ]] && [[ $COMMUNITY_SERVER == "true" ]]; then
-        START_OPTIONS="$START_OPTIONS EpicApp=PalServer"
+        START_OPTIONS="$START_OPTIONS -EpicApp=PalServer"
     fi
     if [[ -n $MULTITHREAD_ENABLED ]] && [[ $MULTITHREAD_ENABLED == "true" ]]; then
         START_OPTIONS="$START_OPTIONS -useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS"
