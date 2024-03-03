@@ -3,7 +3,7 @@ services:
   palworld-dedicated-server:
     build: .
     container_name: palworld-dedicated-server
-    image: jammsen/palworld-dedicated-server:latest
+    image: 'jordanolivet/palworld-dedicated-server:latest'
     restart: always
     network_mode: bridge
     ports:
@@ -16,5 +16,6 @@ services:
       - COMMUNITY_SERVER=true
       - PUBLIC_IP=
       - PUBLIC_PORT=
+      - RCON_PORT=25575
     volumes:
       - ./game:/palworld

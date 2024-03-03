@@ -45,6 +45,9 @@ function startServer() {
     if [[ -n $MULTITHREAD_ENABLED ]] && [[ $MULTITHREAD_ENABLED == "true" ]]; then
         START_OPTIONS="$START_OPTIONS -useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS"
     fi
+
+    START_OPTIONS="$START_OPTIONS -RCONPort=$RCON_PORT"
+
     ./PalServer.sh "$START_OPTIONS" 
 }
 
